@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:text="@{dataModel.id}"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Ashis Rao" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/id"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_alignStart="@+id/id"
+                android:textColor="#aaa"
+                android:text="@{dataModel.name}"
+                tools:text="Ashis Rao" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/price"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="#100077ff"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@{`$` + String.format(`%.2f`,dataModel.price)}"
+                android:textColor="@color/teal_700"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="$234.5" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dataModel"
+            type="app.yummy.stocky.model.Stock" />
+
+    </data>
+
+</layout>

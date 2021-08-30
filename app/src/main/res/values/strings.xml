@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Stocky</string>
+    <string name="stock_details">Stock Details</string>
+    <string name="company_types">Company Types</string>
+    <string name="address">Address</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="website">Website</string>
+    <string name="go_to_website">Go to website</string>
+</resources>
